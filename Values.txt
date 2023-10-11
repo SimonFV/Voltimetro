@@ -1,0 +1,1 @@
+V entrada = 4.972 V
