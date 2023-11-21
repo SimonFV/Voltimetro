@@ -72,9 +72,9 @@ void loop(void)
 
       // Check voltage range: 10 V or 100 V
       if (voltage_range == 0)
-        message += "10," + String(v10, 3);
+        message += "10," + String(v10, 3) + "\n";
       else
-        message += "100," + String(v100, 2);
+        message += "100," + String(v100, 2) + "\n";
       
       client.write(message.c_str());
       
@@ -88,7 +88,6 @@ void loop(void)
     led = HIGH;
   else
     led = LOW;
-  Serial.println(led);
   digitalWrite(outPinD4, led);
   delay(500);
 }
